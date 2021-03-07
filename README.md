@@ -11,7 +11,7 @@
 The project consists of an interactive python program to analyze data provided by the bicycle-sharing system "Bikeshare" from 3 different cities across the US.  
 
 ### Files used
-**Date files from 3 US cities:**
+**Data files from 3 US cities:**
 * *chicago.csv*
 * *new_york_city.csv*
 * *washington.csv*
