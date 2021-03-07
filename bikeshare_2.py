@@ -87,26 +87,30 @@ def load_data(data_filter):
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
     
+    print('-'*40)        
+    return df
 
-    new_dframe = df
+
+def show_data(df):
+    """Displays 5 rows of data at a time if demanded by user."""
+
     pd.set_option('display.max_columns',200)
     
     while True:
         show = input('\nWould you like to show the (next) 5 rows of the dataset? Enter yes or no.\n')
         if show.lower() == 'yes':
             print()
-            print(new_dframe.head())
-            new_dframe = new_dframe.drop(new_dframe.head().index)
+            print(df.head())
+            df = df.drop(df.head().index)
         else:
             break
 
-    print('-'*40)        
-    return df
-
+    print('-'*40)
     
+
 def time_stats(df, data_filter):
     """Displays statistics on the most frequent times of travel."""
-
+    
     city, month, day = data_filter
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -231,6 +235,7 @@ def main():
     while True:
         data_filter = get_filter()
         df = load_data(data_filter)
+        show_data(df)
 
         time_stats(df, data_filter)
         station_stats(df, data_filter)
