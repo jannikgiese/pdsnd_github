@@ -8,7 +8,7 @@
 :metal: Bikeshare Data Analysis :metal:
 
 ### Description
-Describe what your project is about and what it does
+The project consists of an interactive python program to analyze data provided by the bicycle-sharing system "Bikeshare" from 3 different cities across the US.  
 
 ### Files used
 Include the files used
