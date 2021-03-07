@@ -51,7 +51,8 @@ def get_filter():
 
 def load_data(data_filter):
     """
-    Loads data for the specified city and filters by month and day if applicable.
+    Loads data for the specified city, filters by month and day if applicable and 
+    displays a dataset of 5 rows at a time if demanded by user.
 
     Args:
         (tuple) data_filter consisting of: 
