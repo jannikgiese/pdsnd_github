@@ -102,7 +102,11 @@ def show_data(df):
         if show.lower() == 'yes':
             print()
             print(df.head())
-            df = df.drop(df.head().index)
+            if len(df.index) > 5:
+                df = df.drop(df.head().index)
+            else:
+                print('\nYou have reached the end of the dataset!\n')
+                break
         else:
             break
 
